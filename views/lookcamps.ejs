@@ -1,0 +1,31 @@
+<% include  partials/header  %>
+
+
+<div class="container-fluid">
+    <div class="jumbotron">
+        <div id="jumbotron">
+          <h1>This is the looK Page</h1>
+          <p>All the Info at 1 Place!</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">   
+      <% camps.forEach(function(c){ %>
+    
+      <div class="col-sm-6 col-lg-3">
+        <div class="card" >
+          <img src="<%= c.image%>" class="card-img-top" alt="camp image" > 
+          <div class="card-body">
+             <h4 class="card-title"><%=  c.name %></h5>
+             <a href="/lookcamps/<%= c._id %>"><button class="btn btn-primary">Learn More</button></a>
+          </div>
+        </div>
+      </div>
+            <% });  %>
+        
+
+    </div>
+</div>
+
+ <% include  partials/footer  %>

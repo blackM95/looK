@@ -1,0 +1,18 @@
+<% include  ./partials/header  %>
+
+<div class="container">
+    <div class="newCamp">
+        <h1 class="h1"> Edit Comment for <%= camp.name %></h1>
+
+        <form action="/lookcamps/<%=camp._id%>/comment/<%= comment._id %>?_method=PUT" method="POST" class="form">
+        <div class="form-group"> 
+            <input type="text" name="comment[text]" placeholder="Comment text" required>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary newBtn">Submit</button>
+        </div>
+</form>
+    </div>
+
+</div>
+<% include  partials/footer  %>

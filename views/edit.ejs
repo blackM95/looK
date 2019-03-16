@@ -1,0 +1,27 @@
+<% include  ./partials/header  %>
+
+<div class="container">
+    <div class="newCamp">
+        <h1 class="h1"> Edit <%= camp.name %></h1>
+
+        <form action="/lookcamps/<%=camp._id %>?_method=PUT" method="POST" class="form">
+        <div class="form-group"> 
+            <input type="text" name="camp[name]"  value="<%= camp.name%>" required>
+        </div>
+        <div class="form-group"> 
+            <input type="number" name="camp[price]"  required min="0.01" step="0.01" value="<%=camp.price%>">
+        </div>
+        <div class="form-group">
+            <input type="text" name="camp[image]"  value="<%= camp.image%>" required>
+        </div>
+        <div class="form-group">
+            <input type="text" name="camp[description]"  value="<%= camp.description%>" required>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary newBtn">Submit</button>
+        </div>
+</form>
+    </div>
+
+</div>
+<% include  partials/footer  %>
