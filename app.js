@@ -19,10 +19,9 @@ var commentRoutes = require("./routes/comment"),
 
 
 //CONNECTING TO MONGOOSE
-
-mongoose.set('useFindAndModify', false);
-mongoose.connect("mongodb+srv://sachin95:RS0QEsyZg6PnfeU2@shcluster-jxxfr.mongodb.net/looK_db?retryWrites=true");
 mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
+mongoose.set('useFindAndModify', false);
+
 //BASIC CONFIG
 app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
