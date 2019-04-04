@@ -15,6 +15,12 @@ body {
     padding-top: 40vh;
 }
 
+.btn-group-lg>.btn,
+.btn-lg {
+    min-width: 150px;
+    line-height: 20px;
+}
+
 #landing-header h1 {
     color: #fff;
 }

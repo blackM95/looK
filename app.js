@@ -19,7 +19,7 @@ var commentRoutes = require("./routes/comment"),
 
 
 //CONNECTING TO MONGOOSE
-mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://sachin95:J6LeU31eae5flR8Z@shcluster-jxxfr.mongodb.net/test?retryWrites=true", { useNewUrlParser: true });
 mongoose.set('useFindAndModify', false);
 
 //BASIC CONFIG
